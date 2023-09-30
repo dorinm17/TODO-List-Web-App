@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="en" data-framework="javascript">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="TODO, to-do, to do, list, tasks, achieve, goals, complete">
+        <meta name="description" content="to-do list manager">
+        <meta name="author" content="Dorin-Mihai Manea">
+
+		<title>TODOmore</title>
+
+        <link href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Work+Sans&display=swap" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+	</head>
+
+	<body>
+        <header>
+            <h1 id="title">TODOmore</h1>
+        </header>
+
+		<section id="todoapp">
+			<header id="header" class="item">
+				<label id="container">
+					<input type="checkbox" id="toggle-all" disabled>
+					<span class="checkmark-show"></span>
+				</label>
+				<input type="text" id="new-todo" placeholder="What needs to be done?" autofocus>
+				<button id="submit" onclick="todoSubmited()"></button>
+			</header>
+
+			<section id="main" class="item">
+				<ul id="todo-list"></ul>
+			</section>
+
+			<footer id="footer" class="item">
+				<span class="todo-count"></span>
+				<ul class="filters"></ul>
+			</footer>
+		</section>
+
+		<footer id="info">
+			<strong>&copy; Manea Dorin-Mihai | <span id="current-year"></span></strong> &nbsp;
+            <a class="fa fa-instagram" target="_blank" href="https://www.instagram.com/dorinm17/"></a>
+            <a class="fa fa-facebook" target="_blank" href="https://www.facebook.com/dorinm17/"></a>
+            <a class="fa fa-google" target="_blank" href="mailto:dorin.mihai17@gmail.com"></a>
+		</footer>
+	</body>
+	<script>
+		document.getElementById('current-year').innerHTML = new Date().getFullYear();
+	</script>
+	<script src="functionality.js"></script>
+</html>
